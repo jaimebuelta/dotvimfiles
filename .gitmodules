@@ -4,3 +4,9 @@
 [submodule "dotvim/vim-seek"]
 	path = dotvim/vim-seek
 	url = https://github.com/goldfeld/vim-seek.git
+[submodule "dotvim/bundle/ag.vm"]
+	path = dotvim/bundle/ag.vm
+	url = https://github.com/rking/ag.vim.git
+[submodule "dotvim/bundle/ag.vim"]
+	path = dotvim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim.git
