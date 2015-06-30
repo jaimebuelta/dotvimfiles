@@ -58,7 +58,7 @@ if has("autocmd")
 endif
 
 " Highlight over 79 characters
-:au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
+":au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 
 "set my own color scheme
 colo jaime
