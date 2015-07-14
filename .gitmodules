@@ -1,6 +1,3 @@
-[submodule "dotvim/ack.vim"]
-	path = dotvim/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "dotvim/vim-seek"]
 	path = dotvim/vim-seek
 	url = https://github.com/goldfeld/vim-seek.git
