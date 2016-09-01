@@ -131,7 +131,7 @@ let g:syntastic_auto_loc_list=1
 " Deactivate cpp checker as it's not working properly
 let g:loaded_syntastic_cpp_gcc_checker = 0
 " let g:syntastic_quiet_warnings=1
-let g:syntastic_python_flake8_args='--ignore=E122,E128,E121,E123,E127'
+let g:syntastic_python_flake8_args='--ignore=E122,E128,E121,E123,E127,N813,N801,N802,N803,N806,N814'
 let g:syntastic_python_checkers = ['python', 'flake8']
 " Signify options
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -139,6 +139,12 @@ let g:signify_vcs_list = [ 'git', 'hg' ]
 " Ags options
 let g:ags_agexe = '~/.vim/ag-bash.sh'
 let g:ags_agexe = '/opt/local/bin/ag'
+let g:syntastic_rst_checkers = ['proselint']
+let g:syntastic_text_proselint_quiet_messages = {
+    \ 'regex': [
+    \   '\m^typography\.symbols\.ellipsis',
+    \   '\m^typography\.symbols\.curly',
+    \ ] }
 
 set tags=~/mytags
 
