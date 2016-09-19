@@ -26,7 +26,7 @@ set number
 " Show relative numbers for lines
 " set relativenumber
 " Enable python syntax
-let python_highlight_all = 1
+" let python_highlight_all = 1
 " Ignore pyc  and other files when using Command-T
 set wildignore+=*.o,*.git,*.pyc,*.swp,.git,*.pyo
 " Disable swap files
