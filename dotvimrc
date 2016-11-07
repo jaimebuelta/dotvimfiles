@@ -12,6 +12,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'rking/ag.vim'
 Plugin 'gabesoft/vim-ags'
+Plugin 'mindriot101/vim-yapf'
 " Bundle 'myusuf3/numbers.vim'
 "
 call vundle#end()            " required
@@ -116,6 +117,9 @@ vnoremap <up> :m '<-2<CR>gv=gv
 " Left and Right to cycle buffers
 nnoremap <left> :bprevious<CR>
 nnoremap <right> :bnext<CR>
+
+" Remap to escape with control and letter 'l'
+inoremap <c-l> <Esc>
 
 " Map semicolon to colon to avoid hitting CAPS
 " nnoremap ; :
