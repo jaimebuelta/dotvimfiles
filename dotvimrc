@@ -14,6 +14,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'rking/ag.vim'
 Plugin 'gabesoft/vim-ags'
 Plugin 'mindriot101/vim-yapf'
+Plugin 'jaxbot/semantic-highlight.vim'
 " Bundle 'myusuf3/numbers.vim'
 "
 call vundle#end()            " required
@@ -185,3 +186,15 @@ let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l -p ~/.agignore --nocolor -g ""'
+
+
+" Toggle Semantic Hightlight
+:nnoremap <Leader>s :SemanticHighlightToggle<cr>
+" let g:semanticGUIColors = [ '#72d572', '#c5e1a5', '#e6ee9c', '#fff59d', '#ffe082', '#ffcc80', '#ffab91', '#bcaaa4', '#b0bec5', '#ffa726', '#ff8a65', '#f9bdbb', '#f9bdbb', '#f8bbd0', '#e1bee7', '#d1c4e9', '#ffe0b2', '#c5cae9', '#d0d9ff', '#b3e5fc', '#b2ebf2', '#b2dfdb', '#a3e9a4', '#dcedc8' , '#f0f4c3', '#ffb74d' ]
+" let g:semanticGUIColors = [
+"     \ '#9d0019', '#a68300', '#160773', '#268e00',
+"     \ '#9d0019', '#a68300', '#160773', '#268e00',
+"     \ '#9d0019', '#a68300', '#160773', '#268e00',
+"     \ '#9d0019', '#a68300', '#160773', '#268e00',
+"     \ '#9d0019', '#a68300', '#160773', '#268e00'
+"     \ ]
