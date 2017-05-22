@@ -8,13 +8,14 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 " let Vundle manage Vundle
 Plugin 'gmarik/vundle'
-Plugin 'neomake/neomake'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'scrooloose/syntastic'
+" Plugin 'neomake/neomake'
+" Plugin 'fholgado/minibufexpl.vim'
+" Plugin 'scrooloose/syntastic'
 Plugin 'rking/ag.vim'
 Plugin 'gabesoft/vim-ags'
 Plugin 'mindriot101/vim-yapf'
 Plugin 'jaxbot/semantic-highlight.vim'
+Plugin 'w0rp/ale'
 " Bundle 'myusuf3/numbers.vim'
 "
 call vundle#end()            " required
@@ -92,10 +93,10 @@ set nobackup
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " Set options to minibuffexpl
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+" let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplMapWindowNavArrows = 1
+" let g:miniBufExplMapCTabSwitchBufs = 1
+" let g:miniBufExplModSelTarget = 1
 
 " Enable save on loose focus
 au FocusLost * :wa
@@ -155,9 +156,12 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 "    \ ] }
 
 
+" flake8 in python3.6
+" flake8 --version
+" 3.3.0 (flake8-bugbear: 17.2.0, flake8-truveris: 0.3.4, flake8-tuple: 0.2.12, flake8_pep3101: 1.0, mccabe: 0.6.1, pycodestyle: 2.3.1, pyflakes: 1.5.0) CPython 3.6.0 on Darwin
 " Neomake options
 let g:neomake_python_flake8_maker = {
-    \ 'args': ['--ignore=E122,E128,E121,E123,E127,N813,N801,N802,N803,N806,N814',  '--format=default'],
+    \ 'args': ['--ignore=E122,E121,E123,E127,W503,N813,N801,N802,N803,N806,N814',  '--format=default'],
     \ 'errorformat':
         \ '%E%f:%l: could not compile,%-Z%p^,' .
         \ '%A%f:%l:%c: %t%n %m,' .
@@ -169,12 +173,12 @@ let g:neomake_open_list = 2
 let g:neomake_serialize = 1
 let g:neomake_serialize_abort_on_error = 1
 let g:neomake_error_sign = {
-    \ 'text': '>>',
+    \ 'text': '𓂀',
     \ 'texthl': 'ErrorMsg',
     \ }
 
 " Run Neomake after each write and before the read
-autocmd! BufWritePost * Neomake
+" autocmd! BufWritePost * Neomake
 
 set tags=~/mytags
 
@@ -198,3 +202,17 @@ let g:ctrlp_user_command = 'ag %s -l -p ~/.agignore --nocolor -g ""'
 "     \ '#9d0019', '#a68300', '#160773', '#268e00',
 "     \ '#9d0019', '#a68300', '#160773', '#268e00'
 "     \ ]
+"
+"
+let g:ale_sign_error = '𓂀'
+"ALE (asynchronous linter)
+let g:ale_sign_warning = '--'
+let g:ale_python_flake8_args = '--ignore=E122,E121,E123,E127,W503,N813,N801,N802,N803,N806,N814 --format=default'
+let g:ale_open_list=1
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+
+" Map CTRL+j and CTRL+k to navigate errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
