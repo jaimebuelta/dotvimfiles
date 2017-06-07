@@ -53,9 +53,39 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
+" Run commands from flake to fix things
+function! <SID>FixSintax()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    : silent ! pep8fy %
+    " Append automatically trailing commas
+    " :silent ! flake8 % | grep T812 | awk -F ':' '{print "sed -i.bak '\''" $2 "s/$/,/'\'' %"}' | bash
+    " Remove too many blank lines
+    " :silent ! flake8 % | grep E303 | awk -F ':' '{print "sed -i.bak '\''" ($2-1) "d'\'' %"}' | tail -r | bash
+    " Add too few blank lines
+    " :silent ! flake8 % | grep -E '(E302|E301)' | awk -F ':' '{print "gsed -i.bak '\''" $2 "i\\\\'\'' %"}'  | tail -r | bash
+
+    " Add space in operators
+    " :silent ! flake8 % | grep E225 | awk -F ':' '{print "gsed -i.bak '\''" ($2) "s/^\\(.\\{" ($3 - 1) "\\}\\)/\\1 /'\'' %"}' | tail -r | bash
+    " :silent ! flake8 % | grep E231 | awk -F ':' '{print "gsed -i.bak '\''" ($2) "s/^\\(.\\{" $3 "\\}\\)/\\1 /'\'' %"}' | tail -r | bash
+    " Remove space in operators
+    " :silent ! flake8 % | grep E203 | awk -F ':' '{print "gsed -i.bak '\''" $2 "s/.//" $3 "'\'' %"}' | tail -r | bash
+    " :silent ! flake8 % | grep E251 | awk -F ':' '{print "gsed -i.bak '\''" $2 "s/.//" $3 "'\'' %"}' | tail -r | bash
+
+    " Reload the buffer
+    :e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+
+endfunction
+
 if has("autocmd")
     " autocmd FileType python,c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
     autocmd BufWritePre *.py,*.js,*.h,*.cpp :call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePost *.py :call <SID>FixSintax()
 
     " Source the vimrc file after saving it
     "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -212,6 +242,8 @@ let g:ale_open_list=1
 let g:ale_linters = {
 \   'python': ['flake8'],
 \}
+let g:ale_lint_delay = 1000
+let g:ale_lint_on_text_changed = 'normal'
 
 " Map CTRL+j and CTRL+k to navigate errors
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
