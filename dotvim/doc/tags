@@ -132,6 +132,7 @@ command-t-wildignore	command-t.txt	/*command-t-wildignore*
 command-t.txt	command-t.txt	/*command-t.txt*
 cs	surround.txt	/*cs*
 ds	surround.txt	/*ds*
+ft-python-syntax	python-syntax.txt	/*ft-python-syntax*
 g:CommandTAcceptSelectionMap	command-t.txt	/*g:CommandTAcceptSelectionMap*
 g:CommandTAcceptSelectionSplitMap	command-t.txt	/*g:CommandTAcceptSelectionSplitMap*
 g:CommandTAcceptSelectionTabMap	command-t.txt	/*g:CommandTAcceptSelectionTabMap*
@@ -164,6 +165,10 @@ idntobj-introduction	indent-object.txt	/*idntobj-introduction*
 idntobj-objects	indent-object.txt	/*idntobj-objects*
 ii	indent-object.txt	/*ii*
 indent-object.txt	indent-object.txt	/*indent-object.txt*
+python-syntax	python-syntax.txt	/*python-syntax*
+python-syntax-configuration	python-syntax.txt	/*python-syntax-configuration*
+python-syntax.txt	python-syntax.txt	/*python-syntax.txt*
+python.vim	python-syntax.txt	/*python.vim*
 surround	surround.txt	/*surround*
 surround-author	surround.txt	/*surround-author*
 surround-customizing	surround.txt	/*surround-customizing*
