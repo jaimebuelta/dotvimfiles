@@ -14,9 +14,9 @@ Plugin 'gmarik/vundle'
 Plugin 'neomake/neomake'
 " Plugin 'fholgado/minibufexpl.vim'
 " Plugin 'scrooloose/syntastic'
-Plugin 'rking/ag.vim'
-Plugin 'gabesoft/vim-ags'
-Plugin 'mindriot101/vim-yapf'
+" Plugin 'rking/ag.vim'
+" Plugin 'gabesoft/vim-ags'
+" Plugin 'mindriot101/vim-yapf'
 Plugin 'jaxbot/semantic-highlight.vim'
 " Plugin 'w0rp/ale'
 " Bundle 'myusuf3/numbers.vim'
@@ -211,7 +211,8 @@ let g:neomake_error_sign = {
     \ }
 
 " Run Neomake after each write and before the read
-autocmd! BufWritePost * Neomake
+" autocmd! BufWritePost * Neomake
+call neomake#configure#automake('nrwi', 500)
 
 set tags=~/mytags
 
