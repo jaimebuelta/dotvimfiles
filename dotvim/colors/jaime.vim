@@ -44,7 +44,8 @@ hi Function 	    	guifg=#000000 gui=bold
 hi Type 		        guifg=#95ab64 gui=none
 hi Statement 		    guifg=#0000ff gui=none
 hi Keyword		        guifg=#0000ff gui=none
-hi PreProc 		        guifg=#e5786d gui=none
+" hi PreProc 		        guifg=#e5786d gui=none
+hi PreProc 		        guifg=#c85a53 gui=none
 hi Number		        guifg=#800000 gui=none
 hi Special		        guifg=#008040 gui=none
 hi Structure            guifg=#5b6d44 gui=none

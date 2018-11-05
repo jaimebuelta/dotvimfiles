@@ -7,3 +7,72 @@
 [submodule "dotvim/bundle/ag.vim"]
 	path = dotvim/bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
+[submodule "dotvim/bundle/command-t"]
+	path = dotvim/bundle/command-t
+	url = https://github.com/wincent/command-t.git
+[submodule "dotvim/bundle/ctrlp.vim"]
+	path = dotvim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "dotvim/plugged/ctrlp.vim"]
+	path = dotvim/plugged/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "dotvim/bundle/neomake"]
+	path = dotvim/bundle/neomake
+	url = https://github.com/neomake/neomake.git
+[submodule "dotvim/plugged/neomake"]
+	path = dotvim/plugged/neomake
+	url = https://github.com/neomake/neomake.git
+[submodule "dotvim/bundle/nerdcommenter"]
+	path = dotvim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "dotvim/bundle/semantic-highlight.vim"]
+	path = dotvim/bundle/semantic-highlight.vim
+	url = https://github.com/jaxbot/semantic-highlight.vim.git
+[submodule "dotvim/bundle/vim-ags"]
+	path = dotvim/bundle/vim-ags
+	url = https://github.com/gabesoft/vim-ags.git
+[submodule "dotvim/bundle/vim-autopep8"]
+	path = dotvim/bundle/vim-autopep8
+	url = https://github.com/tell-k/vim-autopep8.git
+[submodule "dotvim/bundle/vim-commentary"]
+	path = dotvim/bundle/vim-commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule "dotvim/bundle/vim-fugitive"]
+	path = dotvim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "dotvim/plugged/vim-fugitive"]
+	path = dotvim/plugged/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "dotvim/bundle/vim-gitgutter"]
+	path = dotvim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "dotvim/bundle/vim-indent-guides"]
+	path = dotvim/bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "dotvim/bundle/vim-signify"]
+	path = dotvim/bundle/vim-signify
+	url = https://github.com/mhinz/vim-signify
+[submodule "dotvim/bundle/Jenkinsfile-vim-syntax"]
+	path = dotvim/bundle/Jenkinsfile-vim-syntax
+	url = git@github.com:martinda/Jenkinsfile-vim-syntax.git
+[submodule "dotvim/plugged/vim-signify"]
+	path = dotvim/plugged/vim-signify
+	url = https://github.com/mhinz/vim-signify
+[submodule "dotvim/bundle/vundle"]
+	path = dotvim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+[submodule "dotvim/indent-detector.vim"]
+	path = dotvim/indent-detector.vim
+	url = https://github.com/luochen1990/indent-detector.vim.git
+[submodule "dotvim/python-mode"]
+	path = dotvim/python-mode
+	url = https://github.com/python-mode/python-mode.git
+[submodule "dotvim/python-syntax"]
+	path = dotvim/python-syntax
+	url = https://github.com/vim-python/python-syntax.git
+[submodule "dotvim/vim-colors-solarized"]
+	path = dotvim/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "dotvim/vim-cpp-enhanced-highlight"]
+	path = dotvim/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
